@@ -17,6 +17,8 @@ output_dir = '/lustre/scratch/astro/sc558/Clay17/MR/Pandas/'
 sys.path.insert(0,datadir)
 
 # Template structure for L-Galaxies data
+sys.path.append('../data/')
+sys.path.append('../src/')
 import snap_template   # structure temple for data
 import read_lgal       # function to read in data
 # 
@@ -31,7 +33,7 @@ snaplist_file = '/lustre/scratch/astro/sc558/snaplists/MRPlancksnaplist.txt'
 # Define what snapshot you want
 
 #file_prefix = ['0.00','1.04','2.07','3.11','3.95','5.03','5.92','6.97'
-'''
+
 file_prefix = {
 	0.00:58,
 	1.04:38,
@@ -49,25 +51,6 @@ file_prefix = {
 	12.53:8,		
 	13.66:7,
 	14.90:6
-	}
-'''
-file_prefix = {
-	0.00:59,
-	1.04:39,
-	2.07:31,
-	3.11:26,
-	3.95:23,
-	5.03:20,
-	5.92:18,
-	6.97:16,
-	8.22:14,
-	8.93:13,	
-	9.72:12,	
-	10.57:11,	
-	11.51:10,	
-	12.53:9,		
-	13.66:8,
-	14.90:7
 	}
 
 min_redshift = 0.00
